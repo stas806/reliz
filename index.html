@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Cucina</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>La Cucina</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -16,101 +15,75 @@
         <a href="#menu">Menu</a>
         <a href="#about">About</a>
     </nav>
-
-    <div class="cart-icon">
-        🛒 <span id="cart-count">0</span>
-    </div>
 </header>
 
+<div class="cart">
+    <h2>🛒 Cart</h2>
+    <p>Total: $<span id="total">0</span></p>
+    <button onclick="clearCart()">Clear Cart</button>
+</div>
+
 <section class="hero">
-    <h2>Welcome to La Cucina</h2>
+    <h1>Welcome to La Cucina</h1>
     <p>Experience authentic Italian cuisine</p>
 </section>
 
-<section id="menu">
+<section id="menu" class="menu">
     <h2>Our Menu</h2>
 
     <div class="menu-grid">
 
         <div class="card">
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=500&q=80" alt="Grilled Salmon">
             <h3>Grilled Salmon</h3>
             <p>$28</p>
-            <button onclick="addToCart('Grilled Salmon',28)">
-                Add to Cart
-            </button>
+            <button onclick="addToCart(28)">Add to Cart</button>
         </div>
 
         <div class="card">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Ribeye Steak">
             <h3>Ribeye Steak</h3>
             <p>$42</p>
-            <button onclick="addToCart('Ribeye Steak',42)">
-                Add to Cart
-            </button>
+            <button onclick="addToCart(42)">Add to Cart</button>
         </div>
 
         <div class="card">
+            <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=500&q=80" alt="Caesar Salad">
             <h3>Caesar Salad</h3>
             <p>$12</p>
-            <button onclick="addToCart('Caesar Salad',12)">
-                Add to Cart
-            </button>
+            <button onclick="addToCart(12)">Add to Cart</button>
         </div>
 
         <div class="card">
+            <img src="https://images.unsplash.com/photo-1572656631137-7935297eff55?auto=format&fit=crop&w=500&q=80" alt="Bruschetta">
             <h3>Bruschetta</h3>
             <p>$10</p>
-            <button onclick="addToCart('Bruschetta',10)">
-                Add to Cart
-            </button>
+            <button onclick="addToCart(10)">Add to Cart</button>
         </div>
 
         <div class="card">
+            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=500&q=80" alt="Tiramisu">
             <h3>Tiramisu</h3>
             <p>$9</p>
-            <button onclick="addToCart('Tiramisu',9)">
-                Add to Cart
-            </button>
-        </div>
-
-        <div class="card">
-            <h3>Chocolate Cake</h3>
-            <p>$11</p>
-            <button onclick="addToCart('Chocolate Cake',11)">
-                Add to Cart
-            </button>
+            <button onclick="addToCart(9)">Add to Cart</button>
         </div>
 
     </div>
 </section>
 
-<section id="about">
+<section id="about" class="about">
     <h2>About La Cucina</h2>
-    <p>
-        Since 1985, La Cucina has been serving authentic Italian cuisine.
-    </p>
+    <p>Since 1985, La Cucina has been serving authentic Italian cuisine.</p>
 </section>
 
-<div class="cart">
-    <h2>🛒 Cart</h2>
-    <ul id="cart-items"></ul>
-    <h3>Total: $<span id="total">0</span></h3>
-    <button onclick="clearCart()">Clear Cart</button>
-</div>
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 +380 67 123 45 67</p>
+    <p>✉ lacucina@gmail.com</p>
+    <p>📍 Ternopil, Ukraine</p>
+</section>
 
 <script src="script.js"></script>
-
-<a href="#contacts">contacts</a>
-
-
-<section id="contacts">
-    <h2>Contact Us</h2>
-
-    <p>📞 Phone: +380 67 123 45 67</p>
-
-    <p>📧 Email: lacucina@gmail.com</p>
-
-    <p>📍 Address: Ternopil, Ukraine</p>
-</section>
 
 </body>
 </html>
